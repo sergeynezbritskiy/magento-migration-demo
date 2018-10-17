@@ -4,3 +4,7 @@
 composer config repositories.magento composer https://repo.magento.com
 composer require magento/data-migration-tool:<Magento 2 version>
 ~~~~
+- copy configuration file from `<your magento 2 installation dir>/vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>` to some git tracked directory, e.g. your Magento 2 installation directory, e.g.
+~~~~
+cp ./vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>/config.xml.dist ./config.xml
+~~~~
