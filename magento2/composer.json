@@ -9,7 +9,8 @@
     ],
     "require": {
         "magento/product-community-edition": "2.2.6",
-        "composer/composer": "@alpha"
+        "composer/composer": "@alpha",
+        "magento/data-migration-tool": "2.2.6"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.2.0",
@@ -51,12 +52,16 @@
         }
     },
     "minimum-stability": "stable",
-    "repositories": [
-        {
+    "repositories": {
+        "0": {
             "type": "composer",
             "url": "https://repo.magento.com/"
+        },
+        "magento": {
+            "type": "composer",
+            "url": "https://repo.magento.com"
         }
-    ],
+    },
     "extra": {
         "magento-force": "override"
     }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d5a11d432289a3fa1016fb747d7e488",
+    "content-hash": "57f08562e559a50c4e959dc97665a528",
     "packages": [
         {
             "name": "amzn/amazon-pay-and-login-with-amazon-core-module",
@@ -1214,6 +1214,35 @@
                 "AFL-3.0"
             ],
             "description": "Magento composer library helps to instantiate Composer application and run composer commands."
+        },
+        {
+            "name": "magento/data-migration-tool",
+            "version": "2.2.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/magento/data-migration-tool/magento-data-migration-tool-2.2.6.0.zip",
+                "reference": null,
+                "shasum": "f53b7242888483c64c69ad47bc89dfa2ec375725"
+            },
+            "require": {
+                "magento/framework": "~101.0.0",
+                "monolog/monolog": "^1.17",
+                "symfony/console": "~2.3, !=2.7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Migration\\": [
+                        "src/Migration",
+                        "tests/unit/testsuite/Migration"
+                    ]
+                },
+                "files": [
+                    "src/Migration/cli_commands.php",
+                    "registration.php"
+                ]
+            },
+            "description": "Migration Tool"
         },
         {
             "name": "magento/framework",
