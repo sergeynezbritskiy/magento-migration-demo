@@ -98,10 +98,10 @@
         </step>
     </steps>
     <source>
-        <database host="localhost" name="magento1" user="root" />
+        <database host="mysql" name="magento1_magento2_migration_src" user="admin" password="admin" />
     </source>
     <destination>
-        <database host="localhost" name="magento2" user="root" />
+        <database host="mysql" name="magento1_magento2_migration_dst" user="admin" password="admin" />
     </destination>
     <options>
         <map_file>etc/opensource-to-opensource/1.9.3.10/map.xml.dist</map_file>
@@ -140,6 +140,6 @@
         <edition_number>1.9.3.10</edition_number>
         <init_statements_source>SET NAMES utf8;</init_statements_source>
         <init_statements_destination>SET NAMES utf8;</init_statements_destination>
-        <crypt_key />
+        <crypt_key>d27a50f04c0b5879b48478a756ab2273</crypt_key>
     </options>
 </config>

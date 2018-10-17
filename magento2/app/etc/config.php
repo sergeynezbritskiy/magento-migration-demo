@@ -44,6 +44,7 @@ return [
         'Magento_Paypal' => 1,
         'Magento_Integration' => 1,
         'Magento_CustomerImportExport' => 1,
+        'Magento_DataMigrationTool' => 1,
         'Magento_Deploy' => 1,
         'Magento_Developer' => 1,
         'Magento_Dhl' => 1,
