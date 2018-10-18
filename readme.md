@@ -1,3 +1,8 @@
+#Prerequisites
+Magento 1 supposed to be untouched during the migration. Run this command from Magento 2 installation directory to completely reinstall Magento 2
+~~~~
+bash ../samples/install.sh
+~~~~
 - define your Magento 1 and Magento 2 versions. We are using Magento CE 1.9.3.10 and Magento CE 2.2.6 in this project
 - install migration tool within Magento 2 application
 ~~~~
