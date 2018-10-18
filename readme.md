@@ -22,3 +22,11 @@ cp ./vendor/magento/data-migration-tool/etc/<migration edition>/<ce or version>/
     <crypt_key>d27a50f04c0b5879b48478a756ab2273</crypt_key><!-- mandatory -->
 </options>
 ~~~~
+- migrate settings
+~~~~
+php bin/magento migrate:settings local.xml
+~~~~
+- migrate data
+~~~~
+php bin/magento migrate:data local.xml
+~~~~
