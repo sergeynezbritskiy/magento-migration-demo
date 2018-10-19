@@ -39,3 +39,14 @@ php bin/magento migrate:settings local.xml
 ~~~~
 php bin/magento migrate:data local.xml
 ~~~~
+# Migration process customization
+- exclude document from migration process. To do this you need to add `ignore` node to your map.xml
+~~~~
+<source>
+    <document_rules>
+        <ignore>
+            <document>paybox_question_number</document>
+        </ignore>
+    </document_rules>
+</source>
+~~~~
