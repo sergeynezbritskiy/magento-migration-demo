@@ -50,3 +50,13 @@ php bin/magento migrate:data local.xml
     </document_rules>
 </source>
 ~~~~
+- the same way we can ignore field in document
+~~~~
+<source>
+    <field_rules>
+        <ignore>
+            <field>customer_eav_attribute.is_used_for_customer_segment</field>
+        </ignore>
+    </document_rules>
+</source>
+~~~~
