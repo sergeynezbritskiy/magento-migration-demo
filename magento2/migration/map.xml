@@ -9,6 +9,15 @@
     <source>
         <document_rules>
             <ignore>
+                <document>paybox_question_number</document>
+            </ignore>
+            <ignore>
+                <document>social_facebook_actions</document>
+            </ignore>
+            <ignore>
+                <document>strikeiron_tax_rate</document>
+            </ignore>
+            <ignore>
                 <document>mailchimp_errors</document>
             </ignore>
             <ignore>

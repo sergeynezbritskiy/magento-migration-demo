@@ -104,7 +104,7 @@
         <database host="mysql" name="magento1_magento2_migration_dst" user="admin" password="admin" />
     </destination>
     <options>
-        <map_file>../../../generation/map.xml</map_file>
+        <map_file>../../../migration/map.xml</map_file>
         <eav_map_file>etc/opensource-to-opensource/map-eav.xml.dist</eav_map_file>
         <eav_document_groups_file>etc/opensource-to-opensource/eav-document-groups.xml.dist</eav_document_groups_file>
         <eav_attribute_groups_file>etc/opensource-to-opensource/eav-attribute-groups.xml.dist</eav_attribute_groups_file>
