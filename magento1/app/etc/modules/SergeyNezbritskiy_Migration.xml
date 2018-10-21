@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SergeyNezbritskiy_Tables>
+            <active>true</active>
+            <codePool>local</codePool>
+        </SergeyNezbritskiy_Tables>
+    </modules>
+</config>

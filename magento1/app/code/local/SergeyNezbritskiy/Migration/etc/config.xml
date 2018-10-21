@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SergeyNezbritskiy_Migration>
+            <version>1.0.0.0</version>
+        </SergeyNezbritskiy_Migration>
+    </modules>
+    <global>
+        <resources>
+            <migration_setup>
+                <setup>
+                    <module>SergeyNezbritskiy_Migration</module>
+                </setup>
+            </migration_setup>
+        </resources>
+    </global>
+</config>
