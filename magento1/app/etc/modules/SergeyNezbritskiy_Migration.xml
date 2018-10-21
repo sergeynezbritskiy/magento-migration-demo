@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <SergeyNezbritskiy_Tables>
+        <SergeyNezbritskiy_Migration>
             <active>true</active>
             <codePool>local</codePool>
-        </SergeyNezbritskiy_Tables>
+        </SergeyNezbritskiy_Migration>
     </modules>
 </config>

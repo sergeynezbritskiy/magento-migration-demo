@@ -2,7 +2,7 @@
 <config>
     <modules>
         <SergeyNezbritskiy_Migration>
-            <version>1.0.0.0</version>
+            <version>1.0.0.1</version>
         </SergeyNezbritskiy_Migration>
     </modules>
     <global>
