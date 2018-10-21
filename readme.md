@@ -67,6 +67,22 @@ In order to figure out this you need to add `<rename>` node to `source`->`docume
     </document_rules>
 </source>
 ~~~~
+- the table you want to migrate has columns which have been renamed in Magento 2. In this case you would probably get error like
+
+`[2018-10-21 06:01:06][ERROR]: Source fields are not mapped. Document: migration_table3. Fields: title`
+`[2018-10-21 06:01:06][ERROR]: Destination fields are not mapped. Document: migration_table3. Fields: title_renamed`
+
+In order to figure out this you need to add `<move>` node to `source`->`field_rules` section. e.g.
+~~~~
+<source>
+    <field_rules>
+        <move>
+            <field>migration_table3.title</field>
+            <to>migration_table3.title_renamed</to>
+        </move>
+    </field_rules>
+</source>
+~~~~
 
 - the same way we can ignore field in document
 ~~~~

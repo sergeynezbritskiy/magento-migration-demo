@@ -647,6 +647,10 @@
         </document_rules>
         <field_rules>
             <move>
+                <field>migration_table3.title</field>
+                <to>migration_table3.title_renamed</to>
+            </move>
+            <move>
                 <field>cms_page.root_template</field>
                 <to>cms_page.page_layout</to>
             </move>
