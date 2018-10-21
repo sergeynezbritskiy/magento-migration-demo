@@ -8,6 +8,10 @@
 <map xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="../../map.xsd">
     <source>
         <document_rules>
+            <rename>
+                <document>migration_table2</document>
+                <to>migration_table2_renamed</to>
+            </rename>
             <ignore>
                 <document>paybox_question_number</document>
             </ignore>

@@ -50,6 +50,24 @@ php bin/magento migrate:data local.xml
     </document_rules>
 </source>
 ~~~~
+- migrate custom table. There is no need to costomize anything. By default migration tool migrates everything, that exists in both Magento 1 and Magento 2 db versions. So if some custom table exists in Magento 2 database you do not need to configure anything
+- the table you want to migrate has been renamed in Magento 2. In this case you would probably get error like
+
+`[2018-10-21 05:40:55][ERROR]: Source documents are not mapped: migration_table2`
+`[2018-10-21 05:40:55][ERROR]: Destination documents are not mapped: migration_table2_renamed`
+
+In order to figure out this you need to add `<rename>` node to `source`->`document_rules` section. e.g.
+~~~~
+<source>
+    <document_rules>
+        <rename>
+            <document>migration_table2</document>
+            <to>migration_table2_renamed</to>
+        </rename>
+    </document_rules>
+</source>
+~~~~
+
 - the same way we can ignore field in document
 ~~~~
 <source>
