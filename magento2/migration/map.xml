@@ -2614,6 +2614,18 @@
             <ignore>
                 <datatype>paypal_settlement_report.report_date</datatype>
             </ignore>
+            <ignore>
+                <field>migration_table4.title_new_optional</field>
+            </ignore>
+            <ignore>
+                <field>migration_table4.title_new_required</field>
+            </ignore>
+            <transform>
+                <field>migration_table4.title_new_required</field>
+                <handler class="\Migration\Handler\SetValue">
+                    <param name="value" value="Some Custom Title"/>
+                </handler>
+            </transform>
         </field_rules>
     </destination>
 </map>

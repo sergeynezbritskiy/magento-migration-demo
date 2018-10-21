@@ -50,7 +50,7 @@ php bin/magento migrate:data local.xml
     </document_rules>
 </source>
 ~~~~
-- migrate custom table. There is no need to costomize anything. By default migration tool migrates everything, that exists in both Magento 1 and Magento 2 db versions. So if some custom table exists in Magento 2 database you do not need to configure anything
+- migrate custom table. There is no need to customize anything. By default migration tool migrates everything, that exists in both Magento 1 and Magento 2 db versions and *has the same amount of columns*. So if some custom table exists in both Magento 1 and Magento 2 databases, you do not need to configure anything
 - the table you want to migrate has been renamed in Magento 2. In this case you would probably get error like
 
 `[2018-10-21 05:40:55][ERROR]: Source documents are not mapped: migration_table2`
@@ -82,6 +82,34 @@ In order to figure out this you need to add `<move>` node to `source`->`field_ru
         </move>
     </field_rules>
 </source>
+~~~~
+- destination database has some extra columns which does not exist in Magento 1. Migration Tool will notify you about that.
+`[2018-10-21 06:38:38][ERROR]: Destination fields are not mapped. Document: migration_table4. Fields: title_new_optional,title_new_required`
+Ignoring such column is as easy as adding next node to your map.xml
+~~~~
+<destination>
+    <field_rules>
+        <ignore>
+            <field>migration_table4.title_new_optional</field>
+        </ignore>
+    </field_rules>
+</destination>
+~~~~
+Another option would be to transform some data for this column. The xml declaration would be a bit tricky:
+~~~~
+<destination>
+    <field_rules>
+        <ignore>
+            <field>migration_table4.title_new_required</field>
+        </ignore>
+        <transform>
+            <field>migration_table4.title_new_required</field>
+            <handler class="\Migration\Handler\SetValue">
+                <param name="value" value="Some Custom Title"/>
+            </handler>
+        </transform>
+    </field_rules>
+</destination>
 ~~~~
 
 - the same way we can ignore field in document
