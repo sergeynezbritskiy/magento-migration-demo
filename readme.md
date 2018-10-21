@@ -40,6 +40,23 @@ php bin/magento migrate:settings local.xml
 php bin/magento migrate:data local.xml
 ~~~~
 # Migration process customization
+- transforming data during migration
+You just need to add `<transform>` node to your map.xml
+~~~~
+<destination>
+    <field_rules>
+        <transform>
+            <field>some_value.some_field</field>
+            <handler class="\Migration\Handler\SetValue">
+                <param name="value" value="Some Custom Title"/>
+            </handler>
+        </transform>
+    </field_rules>
+</destination>
+~~~~
+You can define multiple handlers for one column.
+You can use predefined handlers (usually they belong to `\Migration\Handler` namespace), or specify your own handlers.
+
 - exclude document from migration process. To do this you need to add `ignore` node to your map.xml
 ~~~~
 <source>
@@ -122,3 +139,6 @@ Another option would be to transform some data for this column. The xml declarat
     </document_rules>
 </source>
 ~~~~
+## Tricks
+- Convert error message about not mapped fields into `<ignore>` nodes in PhpStorm. 
+Press `Ctrl + R`, select "Regex" mode, and replace `(\w*),` with `\<ignore\>\n\t\<field\>sales_flat_creditmemo.$1\</field\>\n\</ignore>\n`
